@@ -30,7 +30,7 @@ See description for naivebayes.py.
 Language Classification.py [Language: python] - uses different library functions for language predictions and also for generating feature files
 important parameters:
 =>normalize - to shift the value of the feature vectors to their mean
-normalize = 0 , this means do not shift the values to their means
+normalize = 0 , this means do not shift the values to their means but values in this case turns out to be negative and hence we never set normalize=1
 
 =>algo_code -  which algorithm to use for feature selection. 1: Linear-fitting using chi^2 technique and 2: RFE (recursive feature elimination)
 algo_code = 1
@@ -50,12 +50,15 @@ create = 0
 
 ---------------------------------------------
 
-createEmsamble.py - creates an ensemble prediction of all the learners present in the path and generates two files  - (1) variation 1 as discussed in report i.e. based on mode ; (2) variation 2 as discussed in report i.e.
+createEmsamble.py [Language: python]- creates an ensemble prediction of all the learners present in the path and generates two files  - (1) variation 1 as discussed in report i.e. based on mode ; (2) variation 2 as discussed in report i.e.
 weighted sum
+[proper paths need to be specified here]
 
 ---------------------------------------------
 
+compare_outputs.py  [Language: python] - compares the similarity between files in the 'ref_files' folder and the 'prediction' folder. This is to have an idea that the prediction which is being made is not way off.
 
+---------------------------------------------
 Dataset_pie.m [Language: MATLAB] - plots the pie chart of the data distributions
 
 ---------------------------------------------
@@ -63,6 +66,15 @@ Dataset_pie.m [Language: MATLAB] - plots the pie chart of the data distributions
 test_train.m [Language: MATLAB] - plots the test train for different Machine Learning models with different sizes of test and train data
 
 ---------------------------------------------
+
+rf_trees.m [Language: MATLAB] - plots the validation and training accuracy of the random forest vs number of trees 
+
+---------------------------------------------
+
+unicodeval_features.txt - this contains the unicode values of emojis and all the noise present in the data. This file is not for execution and is just used for reference purposes
+
+---------------------------------------------
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''{All the python codes are compatible with Python 2.7/3.6 unless specified.}''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Problem with Kaggle account:
 Initially I created the account with username ADL_P2 and my email id amar.kumar@mail.mcgill.ca but I verified my account using a phone number which was used and this resulted in my account getting blocked. So, I contacted kaggle 

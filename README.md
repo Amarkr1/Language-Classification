@@ -1,8 +1,10 @@
 #####################################################################
+		
 		PROJECT 2: COMP 551 - LANGUAGE CLASSIFICATION
 		author: AMAR KUMAR[amar.kumar@mail.mcgill.ca]
 			LITA FAN [lita.fan@mail.mcgill.ca]
 			DEKLAN CHUNG [deklan.chung@mail.mcgill.ca]
+			
 #####################################################################
 
 File descriptions:

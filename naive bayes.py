@@ -31,7 +31,7 @@ y_file = pd.read_csv('train_set_y.csv',sep=',', header= 0 , dtype = {'Id':int ,'
 y = y_file['Category']
 train_x, val_x,train_y,val_y = train_test_split(dataset,y,test_size=0.3)
 
-selection = 1
+selection = 0
 selectBest = SelectKBest(score_func=chi2, k=50)
 fit = selectBest.fit(train_x, train_y)
 bestFeatures = fit.transform(train_x)
@@ -124,7 +124,9 @@ for i in range(5):
     nb_val_predict['{0}'.format(i)] = predictClass(sep_test['{0}'.format(i)])
     nb_train_predict['{0}'.format(i)] = predictClass(sep_train['{0}'.format(i)])
 
+#confusion matrix for the validation set
 cfm_val = map(list,createConfusionMatrix(nb_val_predict))
+#confusion matrix for the training set
 cfm_train = map(list,createConfusionMatrix(nb_train_predict))
 
 #prediction on out of bag test set    

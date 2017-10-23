@@ -38,8 +38,19 @@ algo_code = 1
 =>savefiles - whether to save the files or not so that these files can be used by others for further testing of results
 savefiles = 0 means none of the files are saved
 
-A large portion of the code in the end is commented out because that part is for the part where feature selection is performed. Just for the sake of completion the file Language Classification_featureSelection.py is also given 
-incase a feature selection has to be made before executing the code
+=> writeCode - whether to write the data to files or not
+writeCode = 0 means do not write
+
+Just for the sake of completion the file Language Classification_featureSelection.py is also given incase a feature selection has to be made before executing the code
+
+---------------------------------------------
+
+Language Classification_featureSelection [Language: python] - description same as the file Language Classification.py except feature selection can be performed in this file
+
+=> select - whether to perform a selection algorithm on the dataset 
+select = 0 means do not perform selection algorithm
+=> other variable controls are same as the file Language Classification.py
+ 
 ---------------------------------------------
 
 generateFeatures.py [Language: python] - this is used to generate features for training set, test set and also creates the file 'train_set_x_features.csv' and 'test_set_x_features.csv' which can be used by the naive bayes.py
